@@ -225,3 +225,23 @@ console.log('groupByStatus(tasks)', groupByStatus(tasks));
 //     { id: 4, title: "D", status: "in-progress" }
 //   ]
 // }
+function groupBy(items, key) {
+  const result = {};
+
+  for (const item of items) {
+    const field = item[key];
+    if (!result[field]) {
+      result[field] = [];
+    }
+
+    result[field].push(item);
+  }
+
+  return result;
+}
+const users = [
+  { id: 1, name: 'A', role: 'admin' },
+  { id: 2, name: 'B', role: 'user' },
+  { id: 3, name: 'C', role: 'admin' },
+];
+console.log('groupBy(users, "role");', groupBy(users, 'role'));
