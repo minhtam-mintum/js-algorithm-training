@@ -20,7 +20,10 @@ function isAnagram(str1, str2) {
   }
   return true;
 }
-
+console.log("isAnagram('listen', 'silent')", isAnagram('listen', 'silent')); // true
+console.log("isAnagram('hello', 'world')", isAnagram('hello', 'world')); // false
+console.log("isAnagram('aab', 'ab')", isAnagram('aab', 'ab')); // false
+console.log("isAnagram('aab', 'aba')", isAnagram('aab', 'aba')); // true
 function sameFrequencyArray(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
 
@@ -40,11 +43,23 @@ function sameFrequencyArray(arr1, arr2) {
 
   return true;
 }
-console.log(sameFrequencyArray([1, 2, 2, 3], [2, 1, 3, 2])); // true
-console.log(sameFrequencyArray([1, 2, 2, 3], [1, 2, 3])); // false
-console.log(sameFrequencyArray(['a', 'b', 'a'], ['b', 'a', 'a'])); // true
-console.log(sameFrequencyArray(['a', 'b', 'a'], ['a', 'b', 'b'])); // false
-console.log(sameFrequencyArray([], [])); // true
+console.log(
+  'sameFrequencyArray([1, 2, 2, 3], [2, 1, 3, 2])',
+  sameFrequencyArray([1, 2, 2, 3], [2, 1, 3, 2]),
+); // true
+console.log(
+  'sameFrequencyArray([1, 2, 2, 3], [1, 2, 3])',
+  sameFrequencyArray([1, 2, 2, 3], [1, 2, 3]),
+); // false
+console.log(
+  "sameFrequencyArray(['a', 'b', 'a'], ['b', 'a', 'a'])",
+  sameFrequencyArray(['a', 'b', 'a'], ['b', 'a', 'a']),
+); // true
+console.log(
+  "sameFrequencyArray(['a', 'b', 'a'], ['a', 'b', 'b'])",
+  sameFrequencyArray(['a', 'b', 'a'], ['a', 'b', 'b']),
+); // false
+console.log('sameFrequencyArray([], [])', sameFrequencyArray([], [])); // true
 function mostFrequent(arr) {
   if (arr.length === 0) return null;
 
@@ -65,19 +80,22 @@ function mostFrequent(arr) {
 
   return maxItem;
 }
-console.log('mostFrequent', mostFrequent([1, 2, 2, 3, 3, 3]));
+console.log('mostFrequent([1, 2, 2, 3, 3, 3])', mostFrequent([1, 2, 2, 3, 3, 3]));
 // 3
 
-console.log('mostFrequent', mostFrequent(['a', 'b', 'a', 'c', 'b', 'a']));
+console.log(
+  "mostFrequent(['a', 'b', 'a', 'c', 'b', 'a'])",
+  mostFrequent(['a', 'b', 'a', 'c', 'b', 'a']),
+);
 // "a"
 
-console.log('mostFrequent', mostFrequent([5]));
+console.log('mostFrequent([5])', mostFrequent([5]));
 // 5
 
-console.log('mostFrequent', mostFrequent([]));
+console.log('mostFrequent([])', mostFrequent([]));
 // null
 
-console.log('mostFrequent', mostFrequent([1, 1, 2, 2]));
+console.log('mostFrequent([1, 1, 2, 2])', mostFrequent([1, 1, 2, 2]));
 // 1 hoặc 2 đều có thể chấp nhận, tùy rule
 
 function twoSum(nums, target) {
@@ -96,13 +114,13 @@ function twoSum(nums, target) {
 
   return null;
 }
-console.log('twoSum', twoSum([2, 7, 11, 15], 9));
+console.log('twoSum([2, 7, 11, 15], 9)', twoSum([2, 7, 11, 15], 9));
 // [0, 1]
 
-console.log('twoSum', twoSum([3, 2, 4], 6));
+console.log('twoSum([3, 2, 4], 6)', twoSum([3, 2, 4], 6));
 // [1, 2]
 
-console.log('twoSum', twoSum([3, 3], 6));
+console.log('twoSum([3, 3], 6)', twoSum([3, 3], 6));
 // [0, 1]
 
 function firstUniqueChar(str) {
@@ -121,26 +139,26 @@ function firstUniqueChar(str) {
 
   return null;
 }
-console.log('firstUniqueChar', firstUniqueChar('leetcode'));
+console.log("firstUniqueChar('leetcode')", firstUniqueChar('leetcode'));
 // "l"
 
-console.log('firstUniqueChar', firstUniqueChar('loveleetcode'));
+console.log("firstUniqueChar('loveleetcode')", firstUniqueChar('loveleetcode'));
 // "v"
 
-console.log('firstUniqueChar', firstUniqueChar('aabb'));
+console.log("firstUniqueChar('aabb')", firstUniqueChar('aabb'));
 // null
 
 function removeDuplicates(arr) {
   return [...new Set(arr)];
 }
 
-console.log('removeDuplicates', removeDuplicates([1, 2, 2, 3, 1, 4]));
+console.log('removeDuplicates([1, 2, 2, 3, 1, 4])', removeDuplicates([1, 2, 2, 3, 1, 4]));
 // [1, 2, 3, 4]
 
-console.log('removeDuplicates', removeDuplicates(['a', 'b', 'a', 'c']));
+console.log("removeDuplicates(['a', 'b', 'a', 'c'])", removeDuplicates(['a', 'b', 'a', 'c']));
 // ["a", "b", "c"]
 
-console.log('removeDuplicates', removeDuplicates([]));
+console.log('removeDuplicates([])', removeDuplicates([]));
 // []
 function removeDuplicatesById(users) {
   const seen = new Set();
@@ -159,7 +177,7 @@ function removeDuplicatesById(users) {
   return result;
 }
 console.log(
-  'removeDuplicates',
+  "removeDuplicatesById([{ id: 1, name: 'A' }, { id: 2, name: 'B' }, { id: 1, name: 'A updated' }, { id: 3, name: 'C' }])",
   removeDuplicatesById([
     { id: 1, name: 'A' },
     { id: 2, name: 'B' },
@@ -173,3 +191,37 @@ console.log(
 //   { id: 2, name: "B" },
 //   { id: 3, name: "C" }
 // ]
+
+function groupByStatus(items) {
+  const result = {};
+
+  for (const item of items) {
+    const key = item.status;
+    if (!result[key]) {
+      result[key] = [];
+    }
+
+    result[key].push(item);
+  }
+
+  return result;
+}
+const tasks = [
+  { id: 1, title: 'A', status: 'todo' },
+  { id: 2, title: 'B', status: 'done' },
+  { id: 3, title: 'C', status: 'todo' },
+  { id: 4, title: 'D', status: 'in-progress' },
+];
+console.log('groupByStatus(tasks)', groupByStatus(tasks));
+// {
+//   todo: [
+//     { id: 1, title: "A", status: "todo" },
+//     { id: 3, title: "C", status: "todo" }
+//   ],
+//   done: [
+//     { id: 2, title: "B", status: "done" }
+//   ],
+//   "in-progress": [
+//     { id: 4, title: "D", status: "in-progress" }
+//   ]
+// }
