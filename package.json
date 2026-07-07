@@ -1,0 +1,9 @@
+{
+  "name": "js-algorithm-training",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A simple JavaScript workspace for practicing algorithms.",
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}
