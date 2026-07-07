@@ -142,3 +142,34 @@ console.log('removeDuplicates', removeDuplicates(['a', 'b', 'a', 'c']));
 
 console.log('removeDuplicates', removeDuplicates([]));
 // []
+function removeDuplicatesById(users) {
+  const seen = new Set();
+  const result = [];
+
+  for (const user of users) {
+    // nếu id chưa xuất hiện
+    // add id vào seen
+    // push user vào result
+    if (!seen.has(user.id)) {
+      seen.add(user.id);
+      result.push(user);
+    }
+  }
+
+  return result;
+}
+console.log(
+  'removeDuplicates',
+  removeDuplicatesById([
+    { id: 1, name: 'A' },
+    { id: 2, name: 'B' },
+    { id: 1, name: 'A updated' },
+    { id: 3, name: 'C' },
+  ]),
+);
+
+// [
+//   { id: 1, name: "A" },
+//   { id: 2, name: "B" },
+//   { id: 3, name: "C" }
+// ]
